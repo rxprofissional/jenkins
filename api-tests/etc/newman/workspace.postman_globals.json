@@ -1,0 +1,27 @@
+{
+	"id": "da2b6b09-82b0-43be-8641-78ebd550568b",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://hom-sesc.easydentalcloud.com.br/wsapi/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "urlprod",
+			"value": "https://sescrs.easydentalcloud.com.br/wsapi/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://serverest.dev",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-02-04T13:51:22.947Z",
+	"_postman_exported_using": "Postman/11.29.5"
+}

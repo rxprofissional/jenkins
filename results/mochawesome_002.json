@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-28T21:41:48.587Z",
+    "end": "2025-01-28T21:41:59.977Z",
+    "duration": 11390,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fb1f2856-731e-451e-b628-deeb251f0d70",
+      "title": "",
+      "fullFile": "cypress/e2e/home.cy.js",
+      "file": "cypress/home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82312a87-210a-41ea-839f-ce09e76e1369",
+          "title": "Fluxo Ecommerce",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve seguir um fluxo de consulta no Ecommerce",
+              "fullTitle": "Fluxo Ecommerce Deve seguir um fluxo de consulta no Ecommerce",
+              "timedOut": null,
+              "duration": 8599,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://ecommerce.sesc-rs.com.br/ecommerce.landingpage.aspx');\ncy.get('#TABLETXTTITULO > :nth-child(1) > .col-xs-12');\ncy.get('#GRIDLANDINGPAGE__IMG_0001').click();\ncy.get('#vBANNERFILTROCIDADE').click();\ncy.get('#vBANNERFILTROCIDADE').type('Porto Alegre');\ncy.get('#vPRODUTOIMAGEM_0002').click();\ncy.get('#span_vPRODUTODESCRICAO');\n//cy.get('Sesc Fitness (Musculação) Plano Anual')",
+              "err": {},
+              "uuid": "ed739424-6ab9-4ab5-a99c-3cc48567f624",
+              "parentUUID": "82312a87-210a-41ea-839f-ce09e76e1369",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed739424-6ab9-4ab5-a99c-3cc48567f624"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8599,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "8f3a0f56-1f15-4bea-aabc-1ec363ee592a",
+		"name": "Integrações ERP - Homologação",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17106130",
+		"_collection_link": "https://devsproject32.postman.co/workspace/Team-Workspace~280239ce-d019-4f11-877f-9a27bb679bd0/collection/17106130-8f3a0f56-1f15-4bea-aabc-1ec363ee592a?action=share&source=collection_link&creator=17106130"
+	},
+	"item": [
+		{
+			"name": "EasyDental",
+			"item": [
+				{
+					"name": "API de Produção",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}estatistica/producao?filter=[{\"property\": \"id_unidade_atendimento\", \"value\": \"35\"},{\"property\": \"dt_data\", \"value\": \"2023-01-01\"}]",
+							"host": [
+								"{{url}}estatistica"
+							],
+							"path": [
+								"producao"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"id_unidade_atendimento\", \"value\": \"35\"},{\"property\": \"dt_data\", \"value\": \"2023-01-01\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tratamento - Filtrando por id_pt_header",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}tratamento/967859",
+							"host": [
+								"{{url}}tratamento"
+							],
+							"path": [
+								"967859"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tratamento - Filtrando por tx_matricula e id_status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}tratamento?filter=[{\"property\": \"tx_matricula\", \"value\": \"202920704700\"},{\"property\":\"id_status\", \"value\": \"6\"}]",
+							"host": [
+								"{{url}}tratamento"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"tx_matricula\", \"value\": \"202920704700\"},{\"property\":\"id_status\", \"value\": \"6\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tratamento - Filtrando por tx_cpf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}tratamento?filter=[{\"property\": \"tx_cpf\", \"value\": \"77969030068\"}]",
+							"host": [
+								"{{url}}tratamento"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"tx_cpf\", \"value\": \"77969030068\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Intervenção - Filtro por id_pt_item na UR",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}intervencao/4236025",
+							"host": [
+								"{{url}}intervencao"
+							],
+							"path": [
+								"4236025"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Intervenção - Filtrando por id_pt_item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}intervencao?filter=[{\"property\": \"id_pt_item\", \"value\": \"4236025\"}]",
+							"host": [
+								"{{url}}intervencao"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"id_pt_item\", \"value\": \"4236025\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Intervenção - Filtrando por id_pt_item e id_status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}intervencao?filter=[{\"property\": \"id_pt_item\", \"value\": \"4236025\"},{\"property\": \"id_status\", \"value\": \"1\"}]",
+							"host": [
+								"{{url}}intervencao"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"id_pt_item\", \"value\": \"4236025\"},{\"property\": \"id_status\", \"value\": \"1\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Intervenção - Filtrando por id_pt_header e id_status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}intervencao?filter=[{\"property\": \"id_pt_header\", \"value\": \"967816\"},{\"property\": \"id_status\", \"value\": \"1\"}]",
+							"host": [
+								"{{url}}intervencao"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "[{\"property\": \"id_pt_header\", \"value\": \"967816\"},{\"property\": \"id_status\", \"value\": \"1\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tratamento - Atualiza o status do tratamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_status\": 5\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}tratamento/967853/status",
+							"host": [
+								"{{url}}tratamento"
+							],
+							"path": [
+								"967853",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Intervenção - Atualiza o status do intervenção",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlYXN5ZGVudGFsY2xvdWQuY29tLmJyIiwic3ViIjoic2VzYy1ycy5jb20uYnIiLCJhdWQiOiJodHRwczovL3RzdC1zZXNjcnMuZWFzeWRlbnRhbGNsb3VkLmNvbS5ici93c2FwaSIsImlhdCI6MTY2NjI5NzkzNiwic2lkIjoxNjB9.tdJX0aSl2pDkswj8lc-_J0oeBLac6kqNCxkhTyUB1HY",
+								"type": "default"
+							},
+							{
+								"key": "Content-type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_status\": 4\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}intervencao/4236025/status",
+							"host": [
+								"{{url}}intervencao"
+							],
+							"path": [
+								"4236025",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  cypress:
+    image: cypress/included:latest
+    working_dir: /e2e
+    volumes:
+      - ./cypress/e2e:/e2e
+      - ./cypress.config.js:/e2e/cypress.config.js  # Garante que o arquivo config seja reconhecido
+    command: ["--headless"]
+
+  jmeter:
+    image: justb4/jmeter
+    volumes:
+      - ./jmeter-tests:/tests
+      - ./jmeter-tests/tests:/tests/tests
+      - ./jmeter-results:/results
+    command: ["-n", "-t", "/tests/tests/grupo-usuarios-carga.jmx", "-l", "/results/test-results.jtl"]
+
+  newman:
+    image: postman/newman_ubuntu1404
+    volumes:
+      - ./api-tests:/etc/newman
+    command: run /etc/newman/Integra_ERP_Homolog.json -g /etc/newman/workspace.postman_globals.json --reporters cli,html,json --reporter-html-export /results/newman-report.html --reporter-json-export /results/newman-report.json
+    depends_on:
+      - cypress
+      - jmeter
